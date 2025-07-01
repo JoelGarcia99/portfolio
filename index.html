@@ -8,28 +8,7 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-	<style>
-		html {
-			scroll-behavior: smooth;
-		}
-
-		@keyframes fadeInUp {
-			from {
-				opacity: 0;
-				transform: translateY(20px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
-
-		.fade-in-up {
-			animation: fadeInUp 0.8s ease-out forwards;
-			opacity: 0;
-		}
-	</style>
+	<link rel="stylesheet" href="./style.css">
 </head>
 
 <body class="bg-[#0e0e10] text-gray-200 font-sans">
@@ -59,7 +38,26 @@
 	<!-- Hero Section -->
 	<section id="hero"
 		class="relative h-screen flex flex-col justify-center items-center text-center bg-[#0e0e10] px-6 pt-20 overflow-hidden">
-		<div class="relative z-10">
+		<div class="relative z-10 flex flex-col items-center">
+			<svg class="logo" width="210mm" height="210mm" viewBox="0 0 210 210" version="1.1" id="svg1" xml:space="preserve"
+				xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+				<defs id="defs1" />
+				<g id="g48">
+					<g id="layer2" style="display:inline">
+						<path id="path38" style="display:inline;opacity:1"
+							d="m 105.68451,27.134261 -8.403109,10.998295 a 7.0977097,7.0977097 0 0 1 3.173449,5.913851 7.0977097,7.0977097 0 0 1 -0.513663,2.650484 7.0977097,7.0977097 0 0 1 -3.12074,3.545004 7.0977097,7.0977097 0 0 1 -3.463355,0.90227 7.0977097,7.0977097 0 0 1 -7.097758,-7.097758 7.0977097,7.0977097 0 0 1 0.91674,-3.489193 l -11.172961,-5.374349 7.335469,25.266675 44.488238,-0.339514 -0.14107,-0.0677 0.0729,-5.17e-4 7.06417,-24.858948 -11.12955,5.439978 a 7.0977097,7.0977097 0 0 1 1.02732,3.677812 7.0977097,7.0977097 0 0 1 -7.09776,7.097758 7.0977097,7.0977097 0 0 1 -4.85603,-1.921846 7.0977097,7.0977097 0 0 1 -5.2e-4,0 7.0977097,7.0977097 0 0 1 -1.77508,-2.645317 7.0977097,7.0977097 0 0 1 -0.46612,-2.530595 7.0977097,7.0977097 0 0 1 3.29747,-5.994983 z" />
+						<path style="opacity:1"
+							d="m 61.234637,66.565652 36.692755,-0.144081 0.04803,94.229299 -36.980918,-24.44583 -0.04803,-19.54705 11.094275,-0.048 0.04803,13.59169 15.032503,9.98965 -0.04803,-61.570829 -25.886642,0.192109 z"
+							id="path25" />
+						<path style="opacity:1"
+							d="m 103.01827,75.738841 c 0,0 0.5283,-4.418499 3.12177,-6.43564 2.59346,-2.017141 6.1955,-2.497413 6.1955,-2.497413 l 37.55725,-0.09605 -0.048,20.747735 -10.85414,-0.04803 -0.048,-9.029107 h -22.04447 c 0,0 -1.20068,0.09605 -2.01714,0.960543 -0.81646,0.864489 -1.0566,1.921087 -1.0566,1.921087 v 60.562254 l 24.97413,-16.04107 V 111.375 l -12.15087,0.0961 -0.0961,-11.862708 23.43726,-0.144081 0.048,32.274259 -47.0186,30.64133 z"
+							id="path26" />
+						<path style="opacity:1"
+							d="m 100.28487,174.75989 c 0,0 -3.226232,3.90543 -0.1698,6.85998 3.05643,2.95455 7.13167,-0.23772 7.13167,-0.23772 l 16.4368,-18.88195 c 0,0 0.54337,-1.05277 -0.10188,-1.79989 -0.64525,-0.74713 -2.24138,-0.27169 -2.24138,-0.27169 z"
+							id="path48" />
+					</g>
+				</g>
+			</svg>
 			<h2 class="text-md text-gray-400 mb-2 fade-in-up">Hello, I'm</h2>
 			<h1 class="text-6xl sm:text-7xl font-extrabold tracking-wide text-yellow-400 fade-in-up">JOEL GARCÍA</h1>
 			<h3 class="text-2xl sm:text-3xl text-gray-400 mt-2 fade-in-up">Backend Engineer</h3>
@@ -67,7 +65,7 @@
 				<a href="#contact"
 					class="px-6 py-3 border border-gray-400 text-gray-200 rounded-full hover:bg-gray-700 transition">Contact
 					Info</a>
-				<a href="#" download
+				<a href="https://www.cake.me/s--eiEvZX5XcJQH4eHpdogdpA--/joel-garcia" target="_blank" download
 					class="px-6 py-3 border border-yellow-400 bg-transparent text-yellow-400 rounded-full hover:bg-yellow-400 hover:text-black transition">Download
 					CV</a>
 			</div>
@@ -89,7 +87,9 @@
 		<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-12">
 			<!-- Profile Image Placeholder -->
 			<div class="flex-none w-full lg:w-1/3">
-				<div class="w-full aspect-square bg-gray-200 rounded-2xl"></div>
+				<div class="w-full aspect-square bg-gray-200 rounded-2xl">
+					<img src="./assets/img.jpg" alt="Your Name" class="w-full h-full object-cover rounded-2xl">
+				</div>
 			</div>
 			<!-- Content -->
 			<div class="flex-1 space-y-8">
