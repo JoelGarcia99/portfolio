@@ -51,11 +51,16 @@
 
 <body class="bg-[#0e0e10] text-gray-200 font-sans">
 	<!-- Sticky Navbar -->
-	<nav aria-label="Primary" class="fixed top-0 w-full z-50 bg-[#0e0e10]/80 backdrop-blur-md border-b border-[#222]">
-		<div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
-			<div class="text-yellow-400 font-bold text-xl tracking-wide">JOEL GARCÍA</div>
-			<div class="flex items-center gap-6">
-				<ul class="flex gap-6 text-sm font-semibold items-center">
+    <nav aria-label="Primary" class="fixed top-0 w-full z-50 bg-[#0e0e10]/80 backdrop-blur-md border-b border-[#222]">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center relative">
+            <div class="text-yellow-400 font-bold text-xl tracking-wide">JOEL GARCÍA</div>
+            <!-- Mobile menu toggle -->
+            <button id="menu-toggle" class="md:hidden p-2 rounded hover:bg-[#1a1a1e] focus-visible:ring-2 focus-visible:ring-yellow-400" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+                <i id="icon-open" class="bi bi-list text-2xl"></i>
+                <i id="icon-close" class="bi bi-x text-2xl hidden"></i>
+            </button>
+            <div class="hidden md:flex items-center gap-6">
+                <ul class="flex gap-6 text-sm font-semibold items-center">
 					<li><a href="#about" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded flex items-center gap-1"><i class="bi bi-person"></i>
 							<span data-i18n="nav.about">About</span></a></li>
 					<li><a href="#projects" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded flex items-center gap-1"><i class="bi bi-kanban"></i>
@@ -64,26 +69,43 @@
 							<span data-i18n="nav.stack">Stack</span></a></li>
 					<li><a href="#services" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded flex items-center gap-1"><i class="bi bi-layers"></i>
 							<span data-i18n="nav.services">Services</span></a></li>
-					<li><a href="#contact" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded flex items-center gap-1"><i class="bi bi-envelope"></i>
-							<span data-i18n="nav.contact">Contact</span></a></li>
+                    <li><a href="#footer" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded flex items-center gap-1"><i class="bi bi-envelope"></i>
+                            <span data-i18n="nav.contact">Contact</span></a></li>
 					<li><a href="https://community.devallsas.com/author/joel/" target="_blank" rel="noopener"
 							class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded flex items-center gap-1">
 							<i class="bi bi-journal-text"></i> <span data-i18n="nav.blog">Blog</span> <i class="bi bi-box-arrow-up-right text-xs"></i>
 						</a></li>
 				</ul>
-				<div class="flex items-center border border-[#333] rounded-full overflow-hidden text-xs">
-					<button id="lang-en" class="px-3 py-1 hover:bg-[#222]" type="button">EN</button>
-					<button id="lang-es" class="px-3 py-1 hover:bg-[#222]" type="button">ES</button>
-				</div>
-			</div>
-		</div>
-	</nav>
+                <div class="flex items-center border border-[#333] rounded-full overflow-hidden text-xs">
+                    <button id="lang-en" data-lang-toggle data-lang="en" class="px-3 py-1 hover:bg-[#222]" type="button">EN</button>
+                    <button id="lang-es" data-lang-toggle data-lang="es" class="px-3 py-1 hover:bg-[#222]" type="button">ES</button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu panel -->
+        <div id="mobile-menu" class="md:hidden hidden absolute top-full inset-x-0 bg-[#0e0e10]/95 backdrop-blur-md border-b border-[#222]">
+            <div class="max-w-7xl mx-auto px-6 py-4">
+                <ul class="space-y-4 text-sm font-semibold">
+                    <li><a href="#about" class="block hover:text-yellow-400"><i class="bi bi-person mr-2"></i><span data-i18n="nav.about">About</span></a></li>
+                    <li><a href="#projects" class="block hover:text-yellow-400"><i class="bi bi-kanban mr-2"></i><span data-i18n="nav.projects">Projects</span></a></li>
+                    <li><a href="#technologies" class="block hover:text-yellow-400"><i class="bi bi-cpu mr-2"></i><span data-i18n="nav.stack">Stack</span></a></li>
+                    <li><a href="#services" class="block hover:text-yellow-400"><i class="bi bi-layers mr-2"></i><span data-i18n="nav.services">Services</span></a></li>
+                    <li><a href="#footer" class="block hover:text-yellow-400"><i class="bi bi-envelope mr-2"></i><span data-i18n="nav.contact">Contact</span></a></li>
+                    <li><a href="https://community.devallsas.com/author/joel/" target="_blank" rel="noopener" class="block hover:text-yellow-400"><i class="bi bi-journal-text mr-2"></i><span data-i18n="nav.blog">Blog</span></a></li>
+                </ul>
+                <div class="mt-4 flex items-center border border-[#333] rounded-full overflow-hidden text-xs w-max">
+                    <button data-lang-toggle data-lang="en" class="px-3 py-1 hover:bg-[#222]" type="button">EN</button>
+                    <button data-lang-toggle data-lang="es" class="px-3 py-1 hover:bg-[#222]" type="button">ES</button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
 	<main id="main" role="main">
 
 	<!-- Hero Section -->
-	<section id="hero"
-		class="relative h-screen flex flex-col justify-center items-center text-center bg-[#0e0e10] px-6 pt-20 overflow-hidden">
+    <section id="hero"
+        class="relative min-h-screen flex flex-col justify-center items-center text-center bg-[#0e0e10] px-6 pt-24 pb-20 sm:pt-20 sm:pb-0 overflow-visible sm:overflow-hidden">
 		<!-- Decorative animated SVG background (disabled on small screens) -->
 		<div class="hero-bg absolute inset-0 pointer-events-none hidden sm:block" aria-hidden="true">
 			<svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
@@ -140,9 +162,9 @@
 			<h1 class="text-6xl sm:text-7xl font-extrabold tracking-wide text-yellow-400 fade-in-up">JOEL GARCÍA</h1>
 			<h3 class="text-2xl sm:text-3xl text-gray-400 mt-2 fade-in-up" data-i18n="hero.role">Backend Engineer</h3>
 			<div class="flex flex-wrap justify-center gap-4 mt-8 fade-in-up" style="animation-delay: 0.6s;">
-				<a href="#contact"
-					class="px-6 py-3 border border-gray-400 text-gray-200 rounded-full hover:bg-gray-700 transition focus-visible:ring-2 focus-visible:ring-yellow-400"><span data-i18n="hero.contact">Contact</span>
-					<span data-i18n="hero.info">Info</span></a>
+                <a href="#footer"
+                    class="px-6 py-3 border border-gray-400 text-gray-200 rounded-full hover:bg-gray-700 transition focus-visible:ring-2 focus-visible:ring-yellow-400"><span data-i18n="hero.contact">Contact</span>
+                    <span data-i18n="hero.info">Info</span></a>
 				<a href="https://www.cake.me/s--eiEvZX5XcJQH4eHpdogdpA--/joel-garcia" target="_blank" rel="noopener"
 					class="px-6 py-3 border border-yellow-400 bg-transparent text-yellow-400 rounded-full hover:bg-yellow-400 hover:text-black transition focus-visible:ring-2 focus-visible:ring-yellow-400"><span data-i18n="hero.view">View</span>
 					<span data-i18n="hero.cv">CV</span></a>
@@ -399,54 +421,66 @@
 		<link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet">
 	</section>
 
-	<!-- Contact Section -->
-    <section id="contact" class="w-full bg-[#22232a] py-16 px-6">
-        <div class="max-w-7xl mx-auto fade-in-up" style="animation-delay: 0.7s;">
-            <h3 class="text-3xl font-semibold text-yellow-400 flex items-center justify-center gap-2 mb-8">
-                <i class="fas fa-envelope"></i> <span data-i18n="contact.title">Get in Touch</span>
-            </h3>
-			<div class="flex flex-col lg:flex-row gap-8 justify-center items-start lg:items-center">
-				<!-- Email Card -->
-				<div class="flex items-center bg-gray-800 rounded-lg p-6 space-x-4 hover:bg-gray-700 transition">
-					<i class="fas fa-envelope text-2xl text-yellow-400"></i>
-                    <div>
-                        <h4 class="text-xl text-gray-200 font-semibold" data-i18n="contact.email_me">Email Me</h4>
-                        <a href="mailto:joel@devallsas.com" class="text-yellow-400 hover:underline">joel@devallsas.com</a>
-                    </div>
+    <!-- Contact merged into footer -->
+
+	<!-- Footer -->
+    <footer id="footer" class="bg-[#0e0e10] border-t border-[#222]">
+        <div class="max-w-7xl mx-auto px-6 py-10 grid gap-10 md:grid-cols-3 items-start">
+            <div>
+                <div class="flex items-center gap-3">
+                    <svg class="logo-footer" viewBox="0 0 210 210" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <g id="g48">
+                            <g id="layer2" style="display:inline">
+                                <path id="path38" style="display:inline;opacity:1" d="m 105.68451,27.134261 -8.403109,10.998295 a 7.0977097,7.0977097 0 0 1 3.173449,5.913851 7.0977097,7.0977097 0 0 1 -0.513663,2.650484 7.0977097,7.0977097 0 0 1 -3.12074,3.545004 7.0977097,7.0977097 0 0 1 -3.463355,0.90227 7.0977097,7.0977097 0 0 1 -7.097758,-7.097758 7.0977097,7.0977097 0 0 1 0.91674,-3.489193 l -11.172961,-5.374349 7.335469,25.266675 44.488238,-0.339514 -0.14107,-0.0677 0.0729,-5.17e-4 7.06417,-24.858948 -11.12955,5.439978 a 7.0977097,7.0977097 0 0 1 1.02732,3.677812 7.0977097,7.0977097 0 0 1 -7.09776,7.097758 7.0977097,7.0977097 0 0 1 -4.85603,-1.921846 7.0977097,7.0977097 0 0 1 -5.2e-4,0 7.0977097,7.0977097 0 0 1 -1.77508,-2.645317 7.0977097,7.0977097 0 0 1 -0.46612,-2.530595 7.0977097,7.0977097 0 0 1 3.29747,-5.994983 z" />
+                                <path style="opacity:1" d="m 61.234637,66.565652 36.692755,-0.144081 0.04803,94.229299 -36.980918,-24.44583 -0.04803,-19.54705 11.094275,-0.048 0.04803,13.59169 15.032503,9.98965 -0.04803,-61.570829 -25.886642,0.192109 z" id="path25" />
+                                <path style="opacity:1" d="m 103.01827,75.738841 c 0,0 0.5283,-4.418499 3.12177,-6.43564 2.59346,-2.017141 6.1955,-2.497413 6.1955,-2.497413 l 37.55725,-0.09605 -0.048,20.747735 -10.85414,-0.04803 -0.048,-9.029107 h -22.04447 c 0,0 -1.20068,0.09605 -2.01714,0.960543 -0.81646,0.864489 -1.0566,1.921087 -1.0566,1.921087 v 60.562254 l 24.97413,-16.04107 V 111.375 l -12.15087,0.0961 -0.0961,-11.862708 23.43726,-0.144081 0.048,32.274259 -47.0186,30.64133 z" id="path26" />
+                                <path style="opacity:1" d="m 100.28487,174.75989 c 0,0 -3.226232,3.90543 -0.1698,6.85998 3.05643,2.95455 7.13167,-0.23772 7.13167,-0.23772 l 16.4368,-18.88195 c 0,0 0.54337,-1.05277 -0.10188,-1.79989 -0.64525,-0.74713 -2.24138,-0.27169 -2.24138,-0.27169 z" id="path48" />
+                            </g>
+                        </g>
+                    </svg>
+                    <div class="text-yellow-400 font-bold tracking-wide">JOEL GARCÍA</div>
                 </div>
-                <!-- Publications Card -->
-                <div class="flex items-center bg-gray-800 rounded-lg p-6 space-x-4 hover:bg-gray-700 transition">
-                    <i class="fas fa-file-alt text-2xl text-yellow-400"></i>
-                    <div>
-                        <h4 class="text-xl text-gray-200 font-semibold" data-i18n="contact.publications">Publications</h4>
-						<ul class="list-disc list-inside text-gray-400 space-y-1">
-							<li>
-								<a href="https://www.sciencedirect.com/science/article/abs/pii/S0885230823000980?via%3Dihub"
-									target="_blank" class="hover:text-yellow-400">
-									Identifying keywords as high-quality filters in Twitter emergency data
-								</a>
-							</li>
-							<li>
-								<a href="https://link.springer.com/chapter/10.1007/978-3-031-32213-6_4" target="_blank"
-									class="hover:text-yellow-400">
-									Tuning with Genetic Algorithms for Emergency Classification in Social Media
-								</a>
-							</li>
-							<li>
-								<a href="https://publicacionescd.uleam.edu.ec/index.php/encriptar/article/view/547" target="_blank"
-									class="hover:text-yellow-400">
-									Anotado semiautomático de eventos de emergencia en X con IA evolutiva
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
+                <p class="text-gray-400 mt-3 text-sm" data-i18n="footer.tagline">Backend Engineer specializing in Rust and Node.js.</p>
+            </div>
+            <div>
+                <h4 class="text-gray-200 font-semibold text-xs tracking-wider uppercase mb-3" data-i18n="footer.links">Links</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="#about" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded"><span data-i18n="nav.about">About</span></a></li>
+                    <li><a href="#projects" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded"><span data-i18n="nav.projects">Projects</span></a></li>
+                    <li><a href="#technologies" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded"><span data-i18n="nav.stack">Stack</span></a></li>
+                    <li><a href="#services" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded"><span data-i18n="nav.services">Services</span></a></li>
+                    <li><a href="#footer" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded"><span data-i18n="nav.contact">Contact</span></a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-gray-200 font-semibold text-xs tracking-wider uppercase mb-3" data-i18n="footer.contact">Contact</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="mailto:joel@devallsas.com" class="text-yellow-400 hover:underline">joel@devallsas.com</a></li>
+                    <li class="flex gap-4 text-xl">
+                        <a href="https://www.linkedin.com/in/joel-garciart" target="_blank" rel="noopener" data-i18n-attr="aria-label" data-i18n="aria.linkedin" class="hover:text-yellow-400 transition" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/JoelGarcia99" target="_blank" rel="noopener" data-i18n-attr="aria-label" data-i18n="aria.github" class="hover:text-yellow-400 transition" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+                    </li>
+                    <li>
+                        <h5 class="text-gray-400 font-semibold text-xs tracking-wider uppercase mb-2" data-i18n="contact.publications">Publications</h5>
+                        <ul class="space-y-1 list-disc list-inside text-gray-500">
+                            <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0885230823000980?via%3Dihub" target="_blank" rel="noopener" class="hover:text-yellow-400">Identifying keywords as high-quality filters in Twitter emergency data</a></li>
+                            <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-32213-6_4" target="_blank" rel="noopener" class="hover:text-yellow-400">Tuning with Genetic Algorithms for Emergency Classification in Social Media</a></li>
+                            <li><a href="https://publicacionescd.uleam.edu.ec/index.php/encriptar/article/view/547" target="_blank" rel="noopener" class="hover:text-yellow-400">Anotado semiautomático de eventos de emergencia en X con IA evolutiva</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+		<div class="border-t border-[#222]">
+			<div class="max-w-7xl mx-auto px-6 py-4 text-xs text-gray-500 flex items-center justify-between">
+				<p>&copy; <span id="year"></span> Joel García. <span data-i18n="footer.rights">All rights reserved.</span></p>
+				<a href="#hero" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded" data-i18n="footer.top">Back to top</a>
 			</div>
 		</div>
-	</section>
+	</footer>
 
 	</main>
-<script src="./script.js"></script>
+<script src="./script.js?v=2" defer></script>
 </body>
 
 </html>

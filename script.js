@@ -1,7 +1,8 @@
 // Lightweight i18n loader for EN/ES
 (function () {
-  const translations = {
-    en: {
+  try { console.log('[i18n] script loaded'); } catch(e) {}
+    const translations = {
+      en: {
       'nav.about': 'About',
       'nav.projects': 'Projects',
       'nav.stack': 'Stack',
@@ -59,8 +60,14 @@
       'contact.title': 'Get in Touch',
       'contact.email_me': 'Email Me',
       'contact.publications': 'Publications',
+
+      'footer.tagline': 'Backend Engineer specializing in Rust and Node.js.',
+      'footer.links': 'Links',
+      'footer.contact': 'Contact',
+      'footer.rights': 'All rights reserved.',
+      'footer.top': 'Back to top',
     },
-    es: {
+      es: {
       'nav.about': 'Sobre mí',
       'nav.projects': 'Proyectos',
       'nav.stack': 'Tecnologías',
@@ -118,6 +125,11 @@
       'contact.title': 'Ponte en contacto',
       'contact.email_me': 'Envíame un correo',
       'contact.publications': 'Publicaciones',
+      'footer.tagline': 'Ingeniero Backend especializado en Rust y Node.js.',
+      'footer.links': 'Enlaces',
+      'footer.contact': 'Contacto',
+      'footer.rights': 'Todos los derechos reservados.',
+      'footer.top': 'Volver arriba',
     }
   };
 
@@ -143,19 +155,16 @@
       const val = dict[key];
       if (attr && val != null) el.setAttribute(attr, val);
     });
-    // Toggle UI state
-    const enBtn = document.getElementById('lang-en');
-    const esBtn = document.getElementById('lang-es');
-    if (enBtn && esBtn) {
-      // Normalize button classes before applying state
-      [enBtn, esBtn].forEach(btn => btn.classList.remove('bg-yellow-400','text-black','bg-transparent','text-gray-300'));
-      if (lang === 'es') {
-        esBtn.classList.add('bg-yellow-400','text-black');
-        enBtn.classList.add('bg-transparent','text-gray-300');
-      } else {
-        enBtn.classList.add('bg-yellow-400','text-black');
-        esBtn.classList.add('bg-transparent','text-gray-300');
-      }
+    // Toggle UI state for all language buttons (desktop + mobile)
+    const enBtns = document.querySelectorAll('[data-lang-toggle][data-lang="en"]');
+    const esBtns = document.querySelectorAll('[data-lang-toggle][data-lang="es"]');
+    [...enBtns, ...esBtns].forEach(btn => btn.classList.remove('bg-yellow-400','text-black','bg-transparent','text-gray-300'));
+    if (lang === 'es') {
+      esBtns.forEach(b => b.classList.add('bg-yellow-400','text-black'));
+      enBtns.forEach(b => b.classList.add('bg-transparent','text-gray-300'));
+    } else {
+      enBtns.forEach(b => b.classList.add('bg-yellow-400','text-black'));
+      esBtns.forEach(b => b.classList.add('bg-transparent','text-gray-300'));
     }
   }
 
@@ -166,10 +175,56 @@
     applyTranslations(initial);
     localStorage.setItem('lang', initial);
 
-    const enBtn = document.getElementById('lang-en');
-    const esBtn = document.getElementById('lang-es');
-    if (enBtn) enBtn.addEventListener('click', () => { localStorage.setItem('lang','en'); applyTranslations('en'); });
-    if (esBtn) esBtn.addEventListener('click', () => { localStorage.setItem('lang','es'); applyTranslations('es'); });
+    // Bind language toggles (desktop + mobile)
+    document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang') === 'es' ? 'es' : 'en';
+        localStorage.setItem('lang', lang);
+        applyTranslations(lang);
+      });
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+    function closeMenu() {
+      if (!mobileMenu) return;
+      mobileMenu.classList.add('hidden');
+      if (menuToggle) menuToggle.setAttribute('aria-expanded','false');
+      if (iconOpen) iconOpen.classList.remove('hidden');
+      if (iconClose) iconClose.classList.add('hidden');
+    }
+    function openMenu() {
+      if (!mobileMenu) return;
+      mobileMenu.classList.remove('hidden');
+      if (menuToggle) menuToggle.setAttribute('aria-expanded','true');
+      if (iconOpen) iconOpen.classList.add('hidden');
+      if (iconClose) iconClose.classList.remove('hidden');
+    }
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        if (expanded) closeMenu(); else openMenu();
+      });
+      // Close when a link is clicked
+      mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      // Close on Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+      });
+      // Close on outside click
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+          closeMenu();
+        }
+      });
+    }
+
+    // Set current year in footer
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
   }
 
   if (document.readyState === 'loading') {

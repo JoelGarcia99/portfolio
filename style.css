@@ -25,6 +25,16 @@ html {
     height: 250px;
 }
 
+@media (max-width: 380px) {
+  .logo { width: 200px; height: 200px; }
+}
+
+.logo-footer {
+    fill: #FFD700;
+    width: 32px;
+    height: 32px;
+}
+
 /* Respect user motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .fade-in-up {
