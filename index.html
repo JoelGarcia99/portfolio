@@ -224,40 +224,84 @@
 	<!-- Services Section -->
     <section id="services" class="w-full bg-gray-800 py-16 px-6">
         <div class="max-w-7xl mx-auto">
-            <h3 class="text-3xl font-bold text-yellow-400 flex items-center justify-center gap-2 mb-8 fade-in-up"
-                style="animation-delay: 0.2s;">
+            <h3 class="text-3xl font-bold text-yellow-400 flex items-center justify-center gap-2 mb-3 fade-in-up" style="animation-delay: 0.2s;">
                 <i class="bi bi-tools"></i> <span data-i18n="services.title">My Services</span>
             </h3>
-			<div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 justify-center mx-auto max-w-5xl">
-				<div
-					class="bg-gray-700 rounded-xl p-6 text-center shadow fade-in-up transform transition duration-300 hover:shadow-yellow-400/40 hover:shadow-lg hover:scale-105"
-					style="animation-delay: 0.4s;">
-					<i class="bi bi-code-slash text-3xl text-yellow-400"></i>
-                    <h4 class="text-xl font-semibold mt-4 mb-2" data-i18n="services.api">API Architecture</h4>
-                    <p class="text-sm text-gray-300" data-i18n="services.api_desc">Scalable RESTful APIs and backend logic with Rust and Node.js.</p>
-				</div>
-				<div
-					class="bg-gray-700 rounded-xl p-6 text-center shadow fade-in-up transform transition duration-300 hover:shadow-yellow-400/40 hover:shadow-lg hover:scale-105"
-					style="animation-delay: 0.6s;">
-					<i class="bi bi-diagram-3 text-3xl text-yellow-400"></i>
-                    <h4 class="text-xl font-semibold mt-4 mb-2" data-i18n="services.system">System Design</h4>
-                    <p class="text-sm text-gray-300" data-i18n="services.system_desc">Microservices, queues, and DB modeling optimized for performance.</p>
-				</div>
-				<div
-					class="bg-gray-700 rounded-xl p-6 text-center shadow fade-in-up transform transition duration-300 hover:shadow-yellow-400/40 hover:shadow-lg hover:scale-105"
-					style="animation-delay: 0.8s;">
-					<i class="bi bi-box-seam text-3xl text-yellow-400"></i>
-                    <h4 class="text-xl font-semibold mt-4 mb-2" data-i18n="services.container">Containerization</h4>
-                    <p class="text-sm text-gray-300" data-i18n="services.container_desc">CI/CD pipelines with Docker and automated deployments.</p>
-				</div>
-				<div
-					class="bg-gray-700 rounded-xl p-6 text-center shadow fade-in-up transform transition duration-300 hover:shadow-yellow-400/40 hover:shadow-lg hover:scale-105"
-					style="animation-delay: 1.0s;">
-					<i class="fas fa-brain text-3xl text-yellow-400"></i>
-                    <h4 class="text-xl font-semibold mt-4 mb-2" data-i18n="services.ai">AI & Data Science</h4>
-                    <p class="text-sm text-gray-300" data-i18n="services.ai_desc">Development of deep learning models, machine learning pipelines, and end-to-end data science solutions using Python, PyTorch, and modern tools.</p>
-				</div>
-			</div>
+            <p class="text-center text-gray-400 mb-10">Design → Build → Ship. Focused on performance, reliability, and DX.</p>
+
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 items-stretch max-w-7xl mx-auto">
+                <!-- API Architecture -->
+                <a href="#projects" class="group block h-full">
+                    <div class="bg-gradient-to-br from-yellow-400/20 to-transparent p-[1px] rounded-2xl transition duration-300 group-hover:from-yellow-400/40 h-full">
+                        <div class="bg-gray-700 rounded-2xl p-6 h-full flex flex-col">
+                            <div class="w-12 h-12 rounded-full border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 flex items-center justify-center">
+                                <i class="bi bi-code-slash text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold mt-4" data-i18n="services.api">API Architecture</h4>
+                            <p class="text-sm text-gray-300 mt-1" data-i18n="services.api_desc">Scalable RESTful APIs and backend logic with Rust and Node.js.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto pt-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200">Rust</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200">Node.js</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200">gRPC</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- System Design -->
+                <a href="#projects" class="group block h-full">
+                    <div class="bg-gradient-to-br from-yellow-400/20 to-transparent p-[1px] rounded-2xl transition duration-300 group-hover:from-yellow-400/40 h-full">
+                        <div class="bg-gray-700 rounded-2xl p-6 h-full flex flex-col">
+                            <div class="w-12 h-12 rounded-full border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 flex items-center justify-center">
+                                <i class="bi bi-diagram-3 text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold mt-4" data-i18n="services.system">System Design</h4>
+                            <p class="text-sm text-gray-300 mt-1" data-i18n="services.system_desc">Microservices, queues, and DB modeling optimized for performance.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto pt-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200">Microservices</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200">Postgres</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200">Kafka</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Containerization -->
+                <a href="#projects" class="group block h-full">
+                    <div class="bg-gradient-to-br from-yellow-400/20 to-transparent p-[1px] rounded-2xl transition duration-300 group-hover:from-yellow-400/40 h-full">
+                        <div class="bg-gray-700 rounded-2xl p-6 h-full flex flex-col">
+                            <div class="w-12 h-12 rounded-full border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 flex items-center justify-center">
+                                <i class="bi bi-box-seam text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold mt-4" data-i18n="services.container">Containerization</h4>
+                            <p class="text-sm text-gray-300 mt-1" data-i18n="services.container_desc">CI/CD pipelines with Docker and automated deployments.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto pt-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200">Docker</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200">Kubernetes</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200">CI/CD</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- AI & Data Science -->
+                <a href="#projects" class="group block h-full">
+                    <div class="bg-gradient-to-br from-yellow-400/20 to-transparent p-[1px] rounded-2xl transition duration-300 group-hover:from-yellow-400/40 h-full">
+                        <div class="bg-gray-700 rounded-2xl p-6 h-full flex flex-col">
+                            <div class="w-12 h-12 rounded-full border border-yellow-400/30 bg-yellow-400/10 text-yellow-400 flex items-center justify-center">
+                                <i class="fas fa-brain text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold mt-4" data-i18n="services.ai">AI & Data Science</h4>
+                            <p class="text-sm text-gray-300 mt-1" data-i18n="services.ai_desc">Development of deep learning models, machine learning pipelines, and end-to-end data science solutions using Python, PyTorch, and modern tools.</p>
+                            <div class="flex flex-wrap gap-2 mt-auto pt-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200">Python</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200">PyTorch</span>
+                                <span class="px-2 py-1 text-xs rounded-full bg-gray-600 text-gray-200">MLOps</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
 		</div>
 	</section>
 	<!-- Projects Section (Light, Full-width) -->
