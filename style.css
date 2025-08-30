@@ -15,12 +15,47 @@ html {
 }
 
 .fade-in-up {
-	animation: fadeInUp 0.8s ease-out forwards;
-	opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
 }
 
 .logo {
-	fill: #FFD700;
-	width: 250px;
-	height: 250px;
+    fill: #FFD700;
+    width: 250px;
+    height: 250px;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .animate-marquee {
+    animation: none !important;
+  }
+}
+
+/* Hero background visuals */
+.hero-bg svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-blob { opacity: 0.18; animation: drift 48s ease-in-out infinite alternate; }
+.hero-blob:nth-child(2) { opacity: 0.14; animation-duration: 60s; }
+.hero-blob:nth-child(3) { opacity: 0.12; animation-duration: 72s; }
+
+@keyframes drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(2%, -2%, 0) scale(1.02); }
+  100% { transform: translate3d(-2%, 2%, 0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob {
+    animation: none !important;
+  }
 }

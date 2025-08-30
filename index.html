@@ -4,40 +4,118 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Joel García - Backend Engineer</title>
+	<title>Backend Engineer — Joel García</title>
+	<meta name="description" content="Backend engineer specializing in Rust and Node.js. I design and ship scalable APIs, microservices, and data pipelines with strong reliability, security, and observability." />
+
+	<!-- Preconnect hints for faster CDN fetches -->
+	<link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+	<!-- Canonical (update to your final domain) -->
+	<link rel="canonical" href="https://your-domain.com/" />
+
+	<!-- Open Graph / Twitter -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Backend Engineer — Joel García" />
+	<meta property="og:description" content="I build resilient, scalable backends in Rust and Node.js. Explore projects, publications, and contact info." />
+	<meta property="og:image" content="/assets/img.webp" />
+	<meta property="og:url" content="https://your-domain.com/" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Backend Engineer — Joel García" />
+	<meta name="twitter:description" content="I build resilient, scalable backends in Rust and Node.js." />
+	<meta name="twitter:image" content="/assets/img.webp" />
 	<script src="https://cdn.tailwindcss.com"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="./style.css">
+
+	<!-- Structured Data -->
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Joel García",
+  "jobTitle": "Backend Engineer",
+  "url": "https://your-domain.com/",
+  "image": "/assets/img.webp",
+  "email": "mailto:joel@devallsas.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/joel-garciart",
+    "https://github.com/JoelGarcia99"
+  ],
+  "description": "Backend engineer specializing in Rust and Node.js with a focus on scalable APIs, microservices, and observability."
+}
+	</script>
 </head>
 
 <body class="bg-[#0e0e10] text-gray-200 font-sans">
 	<!-- Sticky Navbar -->
-	<nav class="fixed top-0 w-full z-50 bg-[#0e0e10]/80 backdrop-blur-md border-b border-[#222]">
+	<nav aria-label="Primary" class="fixed top-0 w-full z-50 bg-[#0e0e10]/80 backdrop-blur-md border-b border-[#222]">
 		<div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
 			<div class="text-yellow-400 font-bold text-xl tracking-wide">JOEL GARCÍA</div>
-			<ul class="flex gap-6 text-sm font-semibold items-center">
-				<li><a href="#about" class="hover:text-yellow-400 flex items-center gap-1"><i class="bi bi-person"></i>
-						About</a></li>
-				<li><a href="#projects" class="hover:text-yellow-400 flex items-center gap-1"><i class="bi bi-kanban"></i>
-						Projects</a></li>
-				<li><a href="#technologies" class="hover:text-yellow-400 flex items-center gap-1"><i class="bi bi-cpu"></i>
-						Stack</a></li>
-				<li><a href="#services" class="hover:text-yellow-400 flex items-center gap-1"><i class="bi bi-layers"></i>
-						Services</a></li>
-				<li><a href="#contact" class="hover:text-yellow-400 flex items-center gap-1"><i class="bi bi-envelope"></i>
-						Contact</a></li>
-				<li><a href="https://community.devallsas.com/author/joel/" target="_blank"
-						class="hover:text-yellow-400 flex items-center gap-1">
-						<i class="bi bi-journal-text"></i> Blog <i class="bi bi-box-arrow-up-right text-xs"></i>
-					</a></li>
-			</ul>
+			<div class="flex items-center gap-6">
+				<ul class="flex gap-6 text-sm font-semibold items-center">
+					<li><a href="#about" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded flex items-center gap-1"><i class="bi bi-person"></i>
+							<span data-i18n="nav.about">About</span></a></li>
+					<li><a href="#projects" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded flex items-center gap-1"><i class="bi bi-kanban"></i>
+							<span data-i18n="nav.projects">Projects</span></a></li>
+					<li><a href="#technologies" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded flex items-center gap-1"><i class="bi bi-cpu"></i>
+							<span data-i18n="nav.stack">Stack</span></a></li>
+					<li><a href="#services" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded flex items-center gap-1"><i class="bi bi-layers"></i>
+							<span data-i18n="nav.services">Services</span></a></li>
+					<li><a href="#contact" class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded flex items-center gap-1"><i class="bi bi-envelope"></i>
+							<span data-i18n="nav.contact">Contact</span></a></li>
+					<li><a href="https://community.devallsas.com/author/joel/" target="_blank" rel="noopener"
+							class="hover:text-yellow-400 focus-visible:ring-2 focus-visible:ring-yellow-400 rounded flex items-center gap-1">
+							<i class="bi bi-journal-text"></i> <span data-i18n="nav.blog">Blog</span> <i class="bi bi-box-arrow-up-right text-xs"></i>
+						</a></li>
+				</ul>
+				<div class="flex items-center border border-[#333] rounded-full overflow-hidden text-xs">
+					<button id="lang-en" class="px-3 py-1 hover:bg-[#222]" type="button">EN</button>
+					<button id="lang-es" class="px-3 py-1 hover:bg-[#222]" type="button">ES</button>
+				</div>
+			</div>
 		</div>
 	</nav>
+
+	<main id="main" role="main">
 
 	<!-- Hero Section -->
 	<section id="hero"
 		class="relative h-screen flex flex-col justify-center items-center text-center bg-[#0e0e10] px-6 pt-20 overflow-hidden">
+		<!-- Decorative animated SVG background (disabled on small screens) -->
+		<div class="hero-bg absolute inset-0 pointer-events-none hidden sm:block" aria-hidden="true">
+			<svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+				<defs>
+					<radialGradient id="heroGlow" cx="50%" cy="40%" r="70%">
+						<stop offset="0%" stop-color="#f59e0b" stop-opacity="0.06"/>
+						<stop offset="100%" stop-color="#0e0e10" stop-opacity="0"/>
+					</radialGradient>
+					<filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+						<feGaussianBlur stdDeviation="60"/>
+					</filter>
+					<pattern id="softGrid" width="80" height="80" patternUnits="userSpaceOnUse">
+						<path d="M 80 0 L 0 0 0 80" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+					</pattern>
+				</defs>
+
+				<!-- faint grid to add depth across full space -->
+				<rect width="1440" height="900" fill="url(#softGrid)" />
+				<!-- gentle center glow -->
+				<rect width="1440" height="900" fill="url(#heroGlow)" />
+
+				<!-- soft blurred blobs with very low opacity -->
+				<g filter="url(#softBlur)">
+					<circle class="hero-blob" cx="360" cy="220" r="180" fill="#f59e0b" />
+					<circle class="hero-blob" cx="980" cy="320" r="220" fill="#fbbf24" />
+					<circle class="hero-blob" cx="720" cy="640" r="260" fill="#f59e0b" />
+				</g>
+
+
+			</svg>
+		</div>
+
 		<div class="relative z-10 flex flex-col items-center">
 			<svg class="logo" width="210mm" height="210mm" viewBox="0 0 210 210" version="1.1" id="svg1" xml:space="preserve"
 				xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
@@ -58,21 +136,23 @@
 					</g>
 				</g>
 			</svg>
-			<h2 class="text-md text-gray-400 mb-2 fade-in-up">Hello, I'm</h2>
+			<h2 class="text-md text-gray-400 mb-2 fade-in-up" data-i18n="hero.hello">Hello, I'm</h2>
 			<h1 class="text-6xl sm:text-7xl font-extrabold tracking-wide text-yellow-400 fade-in-up">JOEL GARCÍA</h1>
-			<h3 class="text-2xl sm:text-3xl text-gray-400 mt-2 fade-in-up">Backend Engineer</h3>
+			<h3 class="text-2xl sm:text-3xl text-gray-400 mt-2 fade-in-up" data-i18n="hero.role">Backend Engineer</h3>
 			<div class="flex flex-wrap justify-center gap-4 mt-8 fade-in-up" style="animation-delay: 0.6s;">
 				<a href="#contact"
-					class="px-6 py-3 border border-gray-400 text-gray-200 rounded-full hover:bg-gray-700 transition">Contact
-					Info</a>
-				<a href="https://www.cake.me/s--eiEvZX5XcJQH4eHpdogdpA--/joel-garcia" target="_blank" download
-					class="px-6 py-3 border border-yellow-400 bg-transparent text-yellow-400 rounded-full hover:bg-yellow-400 hover:text-black transition">Download
-					CV</a>
+					class="px-6 py-3 border border-gray-400 text-gray-200 rounded-full hover:bg-gray-700 transition focus-visible:ring-2 focus-visible:ring-yellow-400"><span data-i18n="hero.contact">Contact</span>
+					<span data-i18n="hero.info">Info</span></a>
+				<a href="https://www.cake.me/s--eiEvZX5XcJQH4eHpdogdpA--/joel-garcia" target="_blank" rel="noopener"
+					class="px-6 py-3 border border-yellow-400 bg-transparent text-yellow-400 rounded-full hover:bg-yellow-400 hover:text-black transition focus-visible:ring-2 focus-visible:ring-yellow-400"><span data-i18n="hero.view">View</span>
+					<span data-i18n="hero.cv">CV</span></a>
+				<a href="mailto:joel@devallsas.com" class="px-6 py-3 border border-yellow-400 bg-yellow-400 text-black rounded-full hover:bg-yellow-300 transition focus-visible:ring-2 focus-visible:ring-yellow-400"><span data-i18n="hero.email">Email</span>
+					<span data-i18n="hero.me">Me</span></a>
 			</div>
 			<div class="flex justify-center gap-6 mt-6 fade-in-up" style="animation-delay: 0.8s;">
-				<a href="https://www.linkedin.com/in/joel-garciart" target="_blank"
-					class="text-2xl hover:text-yellow-400 transition"><i class="bi bi-linkedin"></i></a>
-				<a href="https://github.com/JoelGarcia99" target="_blank" class="text-2xl hover:text-yellow-400 transition"><i
+				<a href="https://www.linkedin.com/in/joel-garciart" target="_blank" rel="noopener" data-i18n-attr="aria-label" data-i18n="aria.linkedin"
+					class="text-2xl hover:text-yellow-400 transition focus-visible:ring-2 focus-visible:ring-yellow-400 rounded"><i class="bi bi-linkedin"></i></a>
+				<a href="https://github.com/JoelGarcia99" target="_blank" rel="noopener" data-i18n-attr="aria-label" data-i18n="aria.github" class="text-2xl hover:text-yellow-400 transition focus-visible:ring-2 focus-visible:ring-yellow-400 rounded"><i
 						class="bi bi-github"></i></a>
 			</div>
 		</div>
@@ -81,14 +161,14 @@
 	<!-- About Section -->
 	<section id="about" class="w-full bg-white py-16 px-6">
 		<div class="max-w-7xl mx-auto text-center mb-8">
-			<p class="text-gray-500">Get To Know More</p>
-			<h2 class="text-4xl font-bold text-gray-900">About Me</h2>
+			<p class="text-gray-500" data-i18n="about.lead">Get To Know More</p>
+			<h2 class="text-4xl font-bold text-gray-900" data-i18n="about.title">About Me</h2>
 		</div>
 		<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-12">
 			<!-- Profile Image Placeholder -->
-			<div class="flex-none w-full lg:w-1/3">
+			<div class="flex-none w-1/2 max-w-xs mx-auto lg:w-1/3 lg:max-w-none">
 				<div class="w-full aspect-square bg-gray-200 rounded-2xl">
-					<img src="./assets/img.webp" alt="Your Name" class="w-full h-full object-cover rounded-2xl">
+					<img src="./assets/img.webp" alt="Portrait of Joel García" width="800" height="800" loading="lazy" class="w-full h-full object-cover rounded-2xl">
 				</div>
 			</div>
 			<!-- Content -->
@@ -98,121 +178,111 @@
 					<div class="border p-6 rounded-2xl hover:shadow-lg transition duration-300">
 						<div class="flex flex-col items-center">
 							<i class="bi bi-award text-2xl text-yellow-400"></i>
-							<h3 class="mt-4 text-xl font-semibold text-gray-900">Experience</h3>
-							<p class="text-gray-600 mt-1">3+ years Backend Development</p>
+							<h3 class="mt-4 text-xl font-semibold text-gray-900" data-i18n="about.experience">Experience</h3>
+							<p class="text-gray-600 mt-1" data-i18n="about.years">3+ years Backend Development</p>
 						</div>
 					</div>
 					<div class="border p-6 rounded-2xl hover:shadow-lg transition duration-300">
 						<div class="flex flex-col items-center">
 							<i class="bi bi-mortarboard text-2xl text-yellow-400"></i>
-							<h3 class="mt-4 text-xl font-semibold text-gray-900">Education</h3>
-							<p class="text-gray-600 mt-1">B.Sc. Information Systems<br> M.Sc. Data Science (In Progress)</p>
+							<h3 class="mt-4 text-xl font-semibold text-gray-900" data-i18n="about.education">Education</h3>
+							<p class="text-gray-600 mt-1" data-i18n-html="about.degrees">B.Sc. Information Systems<br> M.Sc. Data Science (In Progress)</p>
 						</div>
 					</div>
 				</div>
 				<!-- Description -->
 				<div class="text-gray-700 text-base">
-					<p>
-						I’m a backend engineer specializing in building high-performance systems and scalable APIs with Rust and
-						Node.js. I have led multiple projects from architecture to deployment, focusing on clean code, security, and
-						observability. Currently, I’m enhancing my skills in Kubernetes, Infrastructure as Code, and cloud-native
-						DevOps to deliver production-ready solutions.
+					<p data-i18n="about.bio">
+						I’m a backend engineer specializing in building high-performance systems and scalable APIs with Rust and Node.js. I have led multiple projects from architecture to deployment, focusing on clean code, security, and observability. Currently, I’m enhancing my skills in Kubernetes, Infrastructure as Code, and cloud-native DevOps to deliver production-ready solutions.
 					</p>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- Services Section -->
-	<section id="services" class="w-full bg-gray-800 py-16 px-6">
-		<div class="max-w-7xl mx-auto">
-			<h3 class="text-3xl font-bold text-yellow-400 flex items-center justify-center gap-2 mb-8 fade-in-up"
-				style="animation-delay: 0.2s;">
-				<i class="bi bi-tools"></i> My Services
-			</h3>
+    <section id="services" class="w-full bg-gray-800 py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-3xl font-bold text-yellow-400 flex items-center justify-center gap-2 mb-8 fade-in-up"
+                style="animation-delay: 0.2s;">
+                <i class="bi bi-tools"></i> <span data-i18n="services.title">My Services</span>
+            </h3>
 			<div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 justify-center mx-auto max-w-5xl">
 				<div
 					class="bg-gray-700 rounded-xl p-6 text-center shadow fade-in-up transform transition duration-300 hover:shadow-yellow-400/40 hover:shadow-lg hover:scale-105"
 					style="animation-delay: 0.4s;">
 					<i class="bi bi-code-slash text-3xl text-yellow-400"></i>
-					<h4 class="text-xl font-semibold mt-4 mb-2">API Architecture</h4>
-					<p class="text-sm text-gray-300">Scalable RESTful APIs and backend logic with Rust and Node.js.</p>
+                    <h4 class="text-xl font-semibold mt-4 mb-2" data-i18n="services.api">API Architecture</h4>
+                    <p class="text-sm text-gray-300" data-i18n="services.api_desc">Scalable RESTful APIs and backend logic with Rust and Node.js.</p>
 				</div>
 				<div
 					class="bg-gray-700 rounded-xl p-6 text-center shadow fade-in-up transform transition duration-300 hover:shadow-yellow-400/40 hover:shadow-lg hover:scale-105"
 					style="animation-delay: 0.6s;">
 					<i class="bi bi-diagram-3 text-3xl text-yellow-400"></i>
-					<h4 class="text-xl font-semibold mt-4 mb-2">System Design</h4>
-					<p class="text-sm text-gray-300">Microservices, queues, and DB modeling optimized for performance.</p>
+                    <h4 class="text-xl font-semibold mt-4 mb-2" data-i18n="services.system">System Design</h4>
+                    <p class="text-sm text-gray-300" data-i18n="services.system_desc">Microservices, queues, and DB modeling optimized for performance.</p>
 				</div>
 				<div
 					class="bg-gray-700 rounded-xl p-6 text-center shadow fade-in-up transform transition duration-300 hover:shadow-yellow-400/40 hover:shadow-lg hover:scale-105"
 					style="animation-delay: 0.8s;">
 					<i class="bi bi-box-seam text-3xl text-yellow-400"></i>
-					<h4 class="text-xl font-semibold mt-4 mb-2">Containerization</h4>
-					<p class="text-sm text-gray-300">CI/CD pipelines with Docker and automated deployments.</p>
+                    <h4 class="text-xl font-semibold mt-4 mb-2" data-i18n="services.container">Containerization</h4>
+                    <p class="text-sm text-gray-300" data-i18n="services.container_desc">CI/CD pipelines with Docker and automated deployments.</p>
 				</div>
 				<div
 					class="bg-gray-700 rounded-xl p-6 text-center shadow fade-in-up transform transition duration-300 hover:shadow-yellow-400/40 hover:shadow-lg hover:scale-105"
 					style="animation-delay: 1.0s;">
 					<i class="fas fa-brain text-3xl text-yellow-400"></i>
-					<h4 class="text-xl font-semibold mt-4 mb-2">AI & Data Science</h4>
-					<p class="text-sm text-gray-300">Development of deep learning models, machine learning pipelines, and
-						end-to-end data science solutions using Python, PyTorch, and modern tools.</p>
+                    <h4 class="text-xl font-semibold mt-4 mb-2" data-i18n="services.ai">AI & Data Science</h4>
+                    <p class="text-sm text-gray-300" data-i18n="services.ai_desc">Development of deep learning models, machine learning pipelines, and end-to-end data science solutions using Python, PyTorch, and modern tools.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- Projects Section (Light, Full-width) -->
-	<section id="projects" class="w-full bg-white text-gray-900 py-16 px-6">
-		<div class="max-w-7xl mx-auto text-center mb-12">
-			<p class="text-gray-500">Browse My Recent</p>
-			<h2 class="text-4xl font-bold">Projects</h2>
-		</div>
+    <section id="projects" class="w-full bg-white text-gray-900 py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center mb-12">
+            <p class="text-gray-500" data-i18n="projects.lead">Browse My Recent</p>
+            <h2 class="text-4xl font-bold" data-i18n="projects.title">Projects</h2>
+        </div>
 		<div class="max-w-7xl mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
 			<div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-yellow-400/30 transition duration-300 text-center">
 				<i class="fas fa-wallet text-yellow-500 text-3xl mb-3"></i>
-				<h3 class="text-xl font-semibold mb-2">Accountable System</h3>
-				<p class="text-sm text-gray-700">Personal asset management platform — budgeting, reporting, and multi-wallet
-					tracking in Rust + Postgres.</p>
+                <h3 class="text-xl font-semibold mb-2" data-i18n="projects.accountable">Accountable System</h3>
+                <p class="text-sm text-gray-700" data-i18n="projects.accountable_desc">Personal asset management platform — budgeting, reporting, and multi-wallet tracking in Rust + Postgres.</p>
 			</div>
 			<div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-yellow-400/30 transition duration-300 text-center">
 				<i class="fas fa-gamepad text-yellow-500 text-3xl mb-3"></i>
-				<h3 class="text-xl font-semibold mb-2">Bingo Management System</h3>
-				<p class="text-sm text-gray-700">Built for <span class="text-yellow-500">McKakos</span> — event scheduler, prize
-					distribution, and real-time draw logic with Node.js backend.</p>
+                <h3 class="text-xl font-semibold mb-2" data-i18n="projects.bingo">Bingo Management System</h3>
+                <p class="text-sm text-gray-700" data-i18n-html="projects.bingo_desc">Built for <span class="text-yellow-500">McKakos</span> — event scheduler, prize distribution, and real-time draw logic with Node.js backend.</p>
 			</div>
 			<div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-yellow-400/30 transition duration-300 text-center">
 				<i class="fas fa-chart-line text-yellow-500 text-3xl mb-3"></i>
-				<h3 class="text-xl font-semibold mb-2">Dashboards</h3>
-				<p class="text-sm text-gray-700">Developed at <span class="text-yellow-500">Zicom</span> — data-rich monitoring
-					dashboards with advanced filtering and analytics in Vue3 + NestJS.</p>
+                <h3 class="text-xl font-semibold mb-2" data-i18n="projects.dashboards">Dashboards</h3>
+                <p class="text-sm text-gray-700" data-i18n-html="projects.dashboards_desc">Developed at <span class="text-yellow-500">Zicom</span> — data-rich monitoring dashboards with advanced filtering and analytics in Vue3 + NestJS.</p>
 			</div>
 			<div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-yellow-400/30 transition duration-300 text-center">
 				<i class="fas fa-cogs text-yellow-500 text-3xl mb-3"></i>
-				<h3 class="text-xl font-semibold mb-2">ERP Systems</h3>
-				<p class="text-sm text-gray-700">Delivered for <span class="text-yellow-500">Ecx-Labs</span> — modular business
-					logic, invoicing, inventory, HR & permissions in a full-stack Rust environment.</p>
+                <h3 class="text-xl font-semibold mb-2" data-i18n="projects.erp">ERP Systems</h3>
+                <p class="text-sm text-gray-700" data-i18n-html="projects.erp_desc">Delivered for <span class="text-yellow-500">Ecx-Labs</span> — modular business logic, invoicing, inventory, HR & permissions in a full-stack Rust environment.</p>
 			</div>
 			<div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-yellow-400/30 transition duration-300 text-center">
 				<i class="fas fa-shield-alt text-yellow-500 text-3xl mb-3"></i>
-				<h3 class="text-xl font-semibold mb-2">Security Systems</h3>
-				<p class="text-sm text-gray-700">Built for <span class="text-yellow-500">Priverion</span> — audit trails,
-					JWT-based auth, RBAC, and user logs with compliance-grade data isolation.</p>
+                <h3 class="text-xl font-semibold mb-2" data-i18n="projects.security">Security Systems</h3>
+                <p class="text-sm text-gray-700" data-i18n-html="projects.security_desc">Built for <span class="text-yellow-500">Priverion</span> — audit trails, JWT-based auth, RBAC, and user logs with compliance-grade data isolation.</p>
 			</div>
 			<div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-yellow-400/30 transition duration-300 text-center">
 				<i class="fas fa-people-carry text-yellow-500 text-3xl mb-3"></i>
-				<h3 class="text-xl font-semibold mb-2">Resources Management</h3>
-				<p class="text-sm text-gray-700">Created for <span class="text-yellow-500">IEAN Jesus</span> — personnel, asset,
-					and project allocation system designed for intuitive reporting and church resource transparency.</p>
+                <h3 class="text-xl font-semibold mb-2" data-i18n="projects.resources">Resources Management</h3>
+                <p class="text-sm text-gray-700" data-i18n-html="projects.resources_desc">Created for <span class="text-yellow-500">IEAN Jesus</span> — personnel, asset, and project allocation system designed for intuitive reporting and church resource transparency.</p>
 			</div>
 		</div>
 	</section>
 
 
 	<!-- Technologies Section (Light Background with Scroll Animation and Labels) -->
-	<section id="technologies" class="w-full bg-white text-gray-900 py-16 px-6 overflow-hidden">
-		<div class="max-w-7xl mx-auto fade-in-up" style="animation-delay: 0.5s;">
-			<h3 class="text-2xl font-semibold mb-6 text-center">Technologies I Use</h3>
+    <section id="technologies" class="w-full bg-white text-gray-900 py-16 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto fade-in-up" style="animation-delay: 0.5s;">
+            <h3 class="text-2xl font-semibold mb-6 text-center" data-i18n="tech.title">Technologies I Use</h3>
 			<div class="w-full overflow-hidden relative">
 				<div class="flex gap-10 animate-marquee whitespace-nowrap">
 					<!-- Duplicated row for circular loop -->
@@ -238,8 +308,7 @@
 							<span class="text-sm mt-1">MySQL</span>
 						</div>
 						<div class="flex flex-col items-center min-w-[100px]">
-							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="h-14"
-								alt="Python" />
+							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="h-14" width="56" height="56" loading="lazy" alt="Python" />
 							<span class="text-sm mt-1">Python</span>
 						</div>
 						<div class="flex flex-col items-center min-w-[100px]">
@@ -251,8 +320,7 @@
 							<span class="text-sm mt-1">Flutter</span>
 						</div>
 						<div class="flex flex-col items-center min-w-[100px]">
-							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" class="h-14"
-								alt="Vue.js" />
+							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" class="h-14" width="56" height="56" loading="lazy" alt="Vue.js" />
 							<span class="text-sm mt-1">Vue.js</span>
 						</div>
 						<div class="flex flex-col items-center min-w-[100px]">
@@ -268,8 +336,7 @@
 							<span class="text-sm mt-1">Git</span>
 						</div>
 						<div class="flex flex-col items-center min-w-[100px]">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" class="h-14"
-								alt="NumPy" />
+							<img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" class="h-14" width="56" height="56" loading="lazy" alt="NumPy" />
 							<span class="text-sm mt-1">NumPy</span>
 						</div>
 						<div class="flex flex-col items-center min-w-[100px]">
@@ -293,8 +360,7 @@
 							<span class="text-sm mt-1">PyTorch</span>
 						</div>
 						<div class="flex flex-col items-center min-w-[100px]">
-							<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg"
-								class="h-14" alt="Pandas" />
+							<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg" class="h-14" width="56" height="56" loading="lazy" alt="Pandas" />
 							<span class="text-sm mt-1">Pandas</span>
 						</div>
 						<div class="flex flex-col items-center min-w-[100px]">
@@ -334,25 +400,25 @@
 	</section>
 
 	<!-- Contact Section -->
-	<section id="contact" class="w-full bg-[#22232a] py-16 px-6">
-		<div class="max-w-7xl mx-auto fade-in-up" style="animation-delay: 0.7s;">
-			<h3 class="text-3xl font-semibold text-yellow-400 flex items-center justify-center gap-2 mb-8">
-				<i class="fas fa-envelope"></i> Get in Touch
-			</h3>
+    <section id="contact" class="w-full bg-[#22232a] py-16 px-6">
+        <div class="max-w-7xl mx-auto fade-in-up" style="animation-delay: 0.7s;">
+            <h3 class="text-3xl font-semibold text-yellow-400 flex items-center justify-center gap-2 mb-8">
+                <i class="fas fa-envelope"></i> <span data-i18n="contact.title">Get in Touch</span>
+            </h3>
 			<div class="flex flex-col lg:flex-row gap-8 justify-center items-start lg:items-center">
 				<!-- Email Card -->
 				<div class="flex items-center bg-gray-800 rounded-lg p-6 space-x-4 hover:bg-gray-700 transition">
 					<i class="fas fa-envelope text-2xl text-yellow-400"></i>
-					<div>
-						<h4 class="text-xl text-gray-200 font-semibold">Email Me</h4>
-						<a href="mailto:garciajunior796@gmail.com" class="text-yellow-400 hover:underline">joel@devallsas.com</a>
-					</div>
-				</div>
-				<!-- Publications Card -->
-				<div class="flex items-center bg-gray-800 rounded-lg p-6 space-x-4 hover:bg-gray-700 transition">
-					<i class="fas fa-file-alt text-2xl text-yellow-400"></i>
-					<div>
-						<h4 class="text-xl text-gray-200 font-semibold">Publications</h4>
+                    <div>
+                        <h4 class="text-xl text-gray-200 font-semibold" data-i18n="contact.email_me">Email Me</h4>
+                        <a href="mailto:joel@devallsas.com" class="text-yellow-400 hover:underline">joel@devallsas.com</a>
+                    </div>
+                </div>
+                <!-- Publications Card -->
+                <div class="flex items-center bg-gray-800 rounded-lg p-6 space-x-4 hover:bg-gray-700 transition">
+                    <i class="fas fa-file-alt text-2xl text-yellow-400"></i>
+                    <div>
+                        <h4 class="text-xl text-gray-200 font-semibold" data-i18n="contact.publications">Publications</h4>
 						<ul class="list-disc list-inside text-gray-400 space-y-1">
 							<li>
 								<a href="https://www.sciencedirect.com/science/article/abs/pii/S0885230823000980?via%3Dihub"
@@ -378,6 +444,9 @@
 			</div>
 		</div>
 	</section>
+
+	</main>
+<script src="./script.js"></script>
 </body>
 
 </html>
