@@ -76,6 +76,7 @@
 							<i class="bi bi-journal-text"></i> <span data-i18n="nav.blog">Blog</span> <i class="bi bi-box-arrow-up-right text-xs"></i>
 						</a></li>
 				</ul>
+
                 <div class="flex items-center border border-[#333] rounded-full overflow-hidden text-xs">
                     <button id="lang-en" data-lang-toggle data-lang="en" class="px-3 py-1 hover:bg-[#222]" type="button">EN</button>
                     <button id="lang-es" data-lang-toggle data-lang="es" class="px-3 py-1 hover:bg-[#222]" type="button">ES</button>
@@ -173,9 +174,16 @@
 			</div>
 			<div class="flex justify-center gap-6 mt-6 fade-in-up" style="animation-delay: 0.8s;">
 				<a href="https://www.linkedin.com/in/joel-garciart" target="_blank" rel="noopener" data-i18n-attr="aria-label" data-i18n="aria.linkedin"
-					class="text-2xl hover:text-yellow-400 transition focus-visible:ring-2 focus-visible:ring-yellow-400 rounded"><i class="bi bi-linkedin"></i></a>
-				<a href="https://github.com/JoelGarcia99" target="_blank" rel="noopener" data-i18n-attr="aria-label" data-i18n="aria.github" class="text-2xl hover:text-yellow-400 transition focus-visible:ring-2 focus-visible:ring-yellow-400 rounded"><i
-						class="bi bi-github"></i></a>
+					class="text-2xl hover:text-yellow-400 transition focus-visible:ring-2 focus-visible:ring-yellow-400 rounded">
+					<svg class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
+						<path fill="currentColor" d="M20.447 20.452h-3.554V14.83c0-1.342-.027-3.067-1.868-3.067c-1.868 0-2.155 1.46-2.155 2.968v5.72H9.316V9h3.414v1.561h.049c.476-.9 1.637-1.848 3.37-1.848c3.602 0 4.267 2.372 4.267 5.455v6.284zM5.337 7.433a2.062 2.062 0 1 1 0-4.125a2.062 2.062 0 0 1 0 4.125zM6.941 20.452H3.732V9h3.209v11.452z"/>
+					</svg>
+				</a>
+				<a href="https://github.com/JoelGarcia99" target="_blank" rel="noopener" data-i18n-attr="aria-label" data-i18n="aria.github" class="text-2xl hover:text-yellow-400 transition focus-visible:ring-2 focus-visible:ring-yellow-400 rounded">
+					<svg class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
+						<path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.016-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.776.418-1.305.762-1.605-2.665-.304-5.466-1.333-5.466-5.931 0-1.31.468-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.984-.399 3.003-.404 1.019.005 2.046.138 3.005.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.119 3.176.77.84 1.234 1.911 1.234 3.221 0 4.609-2.803 5.625-5.475 5.921.43.372.823 1.103.823 2.222 0 1.606-.015 2.896-.015 3.293 0 .321.216.694.825.576C20.565 22.092 24 17.592 24 12.297 24 5.373 18.627 0 12 .297z"/>
+					</svg>
+				</a>
 			</div>
 		</div>
 	</section>
@@ -310,160 +318,243 @@
             <p class="text-gray-500" data-i18n="projects.lead">Browse My Recent</p>
             <h2 class="text-4xl font-bold" data-i18n="projects.title">Projects</h2>
         </div>
-		<div class="max-w-7xl mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-			<div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-yellow-400/30 transition duration-300 text-center">
-				<i class="fas fa-wallet text-yellow-500 text-3xl mb-3"></i>
-                <h3 class="text-xl font-semibold mb-2" data-i18n="projects.accountable">Accountable System</h3>
-                <p class="text-sm text-gray-700" data-i18n="projects.accountable_desc">Personal asset management platform — budgeting, reporting, and multi-wallet tracking in Rust + Postgres.</p>
-			</div>
-			<div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-yellow-400/30 transition duration-300 text-center">
-				<i class="fas fa-gamepad text-yellow-500 text-3xl mb-3"></i>
-                <h3 class="text-xl font-semibold mb-2" data-i18n="projects.bingo">Bingo Management System</h3>
-                <p class="text-sm text-gray-700" data-i18n-html="projects.bingo_desc">Built for <span class="text-yellow-500">McKakos</span> — event scheduler, prize distribution, and real-time draw logic with Node.js backend.</p>
-			</div>
-			<div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-yellow-400/30 transition duration-300 text-center">
-				<i class="fas fa-chart-line text-yellow-500 text-3xl mb-3"></i>
-                <h3 class="text-xl font-semibold mb-2" data-i18n="projects.dashboards">Dashboards</h3>
-                <p class="text-sm text-gray-700" data-i18n-html="projects.dashboards_desc">Developed at <span class="text-yellow-500">Zicom</span> — data-rich monitoring dashboards with advanced filtering and analytics in Vue3 + NestJS.</p>
-			</div>
-			<div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-yellow-400/30 transition duration-300 text-center">
-				<i class="fas fa-cogs text-yellow-500 text-3xl mb-3"></i>
-                <h3 class="text-xl font-semibold mb-2" data-i18n="projects.erp">ERP Systems</h3>
-                <p class="text-sm text-gray-700" data-i18n-html="projects.erp_desc">Delivered for <span class="text-yellow-500">Ecx-Labs</span> — modular business logic, invoicing, inventory, HR & permissions in a full-stack Rust environment.</p>
-			</div>
-			<div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-yellow-400/30 transition duration-300 text-center">
-				<i class="fas fa-shield-alt text-yellow-500 text-3xl mb-3"></i>
-                <h3 class="text-xl font-semibold mb-2" data-i18n="projects.security">Security Systems</h3>
-                <p class="text-sm text-gray-700" data-i18n-html="projects.security_desc">Built for <span class="text-yellow-500">Priverion</span> — audit trails, JWT-based auth, RBAC, and user logs with compliance-grade data isolation.</p>
-			</div>
-			<div class="bg-gray-100 rounded-2xl p-6 shadow hover:shadow-yellow-400/30 transition duration-300 text-center">
-				<i class="fas fa-people-carry text-yellow-500 text-3xl mb-3"></i>
-                <h3 class="text-xl font-semibold mb-2" data-i18n="projects.resources">Resources Management</h3>
-                <p class="text-sm text-gray-700" data-i18n-html="projects.resources_desc">Created for <span class="text-yellow-500">IEAN Jesus</span> — personnel, asset, and project allocation system designed for intuitive reporting and church resource transparency.</p>
-			</div>
-		</div>
-	</section>
+        <div class="max-w-7xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
+            <!-- Accountable System -->
+            <div class="h-full">
+                <div class="bg-gradient-to-br from-yellow-400/20 to-transparent p-[1px] rounded-2xl h-full">
+                    <div class="bg-gray-100 rounded-2xl p-6 h-full flex flex-col min-h-[340px]">
+                        <div class="w-12 h-12 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-600 flex items-center justify-center">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-4" data-i18n="projects.accountable">Accountable System</h3>
+                        <p class="text-sm text-gray-700 mt-2" data-i18n="projects.accountable_desc">Personal asset management platform — budgeting, reporting, and multi-wallet tracking in Rust + Postgres.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4">
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">Rust</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">Node.js</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">Python</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">RabbitMQ</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">KrakenD</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bingo Management System -->
+            <div class="h-full">
+                <div class="bg-gradient-to-br from-yellow-400/20 to-transparent p-[1px] rounded-2xl h-full">
+                    <div class="bg-gray-100 rounded-2xl p-6 h-full flex flex-col min-h-[340px]">
+                        <div class="w-12 h-12 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-600 flex items-center justify-center">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-4" data-i18n="projects.bingo">Bingo Management System</h3>
+                        <p class="text-sm text-gray-700 mt-2" data-i18n-html="projects.bingo_desc">Built for <span class="text-yellow-500">McKakos</span> — event scheduler, prize distribution, and real-time draw logic with Node.js backend.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4">
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">Vue 3</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">MySQL</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">NestJS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboards -->
+            <div class="h-full">
+                <div class="bg-gradient-to-br from-yellow-400/20 to-transparent p-[1px] rounded-2xl h-full">
+                    <div class="bg-gray-100 rounded-2xl p-6 h-full flex flex-col min-h-[340px]">
+                        <div class="w-12 h-12 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-600 flex items-center justify-center">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-4" data-i18n="projects.dashboards">Dashboards</h3>
+                        <p class="text-sm text-gray-700 mt-2" data-i18n-html="projects.dashboards_desc">Developed at <span class="text-yellow-500">Zicom</span> — data-rich monitoring dashboards with advanced filtering and analytics in Vue3 + NestJS.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4">
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">Vue 3</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">NestJS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ERP Systems -->
+            <div class="h-full">
+                <div class="bg-gradient-to-br from-yellow-400/20 to-transparent p-[1px] rounded-2xl h-full">
+                    <div class="bg-gray-100 rounded-2xl p-6 h-full flex flex-col min-h-[340px]">
+                        <div class="w-12 h-12 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-600 flex items-center justify-center">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-4" data-i18n="projects.erp">ERP Systems</h3>
+                        <p class="text-sm text-gray-700 mt-2" data-i18n-html="projects.erp_desc">Delivered for <span class="text-yellow-500">Ecx-Labs</span> — modular business logic, invoicing, inventory, HR & permissions in a full-stack Rust environment.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4">
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">Flutter</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">AWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Systems -->
+            <div class="h-full">
+                <div class="bg-gradient-to-br from-yellow-400/20 to-transparent p-[1px] rounded-2xl h-full">
+                    <div class="bg-gray-100 rounded-2xl p-6 h-full flex flex-col min-h-[340px]">
+                        <div class="w-12 h-12 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-600 flex items-center justify-center">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-4" data-i18n="projects.security">Security Systems</h3>
+                        <p class="text-sm text-gray-700 mt-2" data-i18n-html="projects.security_desc">Built for <span class="text-yellow-500">Priverion</span> — audit trails, JWT-based auth, RBAC, and user logs with compliance-grade data isolation.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4">
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">Laravel</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">Node.js</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">Python</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">MongoDB</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">ReactJS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources Management -->
+            <div class="h-full">
+                <div class="bg-gradient-to-br from-yellow-400/20 to-transparent p-[1px] rounded-2xl h-full">
+                    <div class="bg-gray-100 rounded-2xl p-6 h-full flex flex-col min-h-[340px]">
+                        <div class="w-12 h-12 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-600 flex items-center justify-center">
+                            <i class="fas fa-people-carry"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-4" data-i18n="projects.resources">Resources Management</h3>
+                        <p class="text-sm text-gray-700 mt-2" data-i18n-html="projects.resources_desc">Created for <span class="text-yellow-500">IEAN Jesus</span> — personnel, asset, and project allocation system designed for intuitive reporting and church resource transparency.</p>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4">
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">MySQL</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">PostgreSQL</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">Vue 3</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-gray-200">CodeIgniter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 	<!-- Technologies Section (Light Background with Scroll Animation and Labels) -->
-    <section id="technologies" class="w-full bg-white text-gray-900 py-16 px-6 overflow-hidden">
-        <div class="max-w-7xl mx-auto fade-in-up" style="animation-delay: 0.5s;">
-            <h3 class="text-2xl font-semibold mb-6 text-center" data-i18n="tech.title">Technologies I Use</h3>
-			<div class="w-full overflow-hidden relative">
-				<div class="flex gap-10 animate-marquee whitespace-nowrap">
-					<!-- Duplicated row for circular loop -->
-					<div class="flex gap-10">
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-rust-plain colored text-6xl"></i>
-							<span class="text-sm mt-1">Rust</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-docker-plain colored text-6xl"></i>
-							<span class="text-sm mt-1">Docker</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-postgresql-plain colored text-6xl"></i>
-							<span class="text-sm mt-1">PostgreSQL</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-nodejs-plain-wordmark colored text-6xl"></i>
-							<span class="text-sm mt-1">Node.js</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-mysql-plain-wordmark colored text-6xl"></i>
-							<span class="text-sm mt-1">MySQL</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="h-14" width="56" height="56" loading="lazy" alt="Python" />
-							<span class="text-sm mt-1">Python</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-typescript-plain colored text-6xl"></i>
-							<span class="text-sm mt-1">TypeScript</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-flutter-plain colored text-6xl"></i>
-							<span class="text-sm mt-1">Flutter</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" class="h-14" width="56" height="56" loading="lazy" alt="Vue.js" />
-							<span class="text-sm mt-1">Vue.js</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-nestjs-plain colored text-6xl"></i>
-							<span class="text-sm mt-1">NestJS</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-nginx-original colored text-6xl"></i>
-							<span class="text-sm mt-1">Nginx</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-git-plain colored text-6xl"></i>
-							<span class="text-sm mt-1">Git</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" class="h-14" width="56" height="56" loading="lazy" alt="NumPy" />
-							<span class="text-sm mt-1">NumPy</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-matplotlib-plain colored text-6xl"></i>
-							<span class="text-sm mt-1">Matplotlib</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-html5-plain colored text-6xl"></i>
-							<span class="text-sm mt-1">HTML5</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-css3-plain colored text-6xl"></i>
-							<span class="text-sm mt-1">CSS3</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-javascript-plain colored text-6xl"></i>
-							<span class="text-sm mt-1">JavaScript</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-pytorch-original colored text-6xl"></i>
-							<span class="text-sm mt-1">PyTorch</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg" class="h-14" width="56" height="56" loading="lazy" alt="Pandas" />
-							<span class="text-sm mt-1">Pandas</span>
-						</div>
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="fas fa-project-diagram text-blue-600 text-6xl"></i>
-							<span class="text-sm mt-1">UML</span>
-						</div>
-					</div>
-					<!-- Cloned content for seamless looping -->
-					<div class="flex gap-10">
-						<!-- clone of all above items -->
-						<div class="flex flex-col items-center min-w-[100px]">
-							<i class="devicon-rust-plain colored text-6xl"></i>
-							<span class="text-sm mt-1">Rust</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<style>
-			@keyframes marquee {
-				0% {
-					transform: translateX(0);
-				}
+    <section id="technologies" class="w-full bg-white text-gray-900 py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-2xl font-semibold mb-8 text-center" data-i18n="tech.title">Technologies I Use</h3>
 
-				100% {
-					transform: translateX(-50%);
-				}
-			}
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <!-- Core Stack -->
+                <div class="rounded-2xl border border-gray-200 p-6 hover:shadow-yellow-400/20 hover:shadow-md transition">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-600 flex items-center justify-center">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold tracking-wide uppercase text-gray-700" data-i18n="tech.core">Core Stack</h4>
+                            <p class="text-xs text-gray-500 mt-1" data-i18n="tech.core_desc">Backend-first stack for building and scaling services.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">Rust</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">Node.js</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">NestJS</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">PostgreSQL</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">Docker</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">Kubernetes</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">AWS</span>
+                    </div>
+                </div>
 
-			.animate-marquee {
-				display: flex;
-				width: max-content;
-				animation: marquee 60s linear infinite;
-			}
-		</style>
-		<link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet">
-	</section>
+                <!-- Messaging & Gateways -->
+                <div class="rounded-2xl border border-gray-200 p-6 hover:shadow-yellow-400/20 hover:shadow-md transition">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-600 flex items-center justify-center">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold tracking-wide uppercase text-gray-700" data-i18n="tech.messaging">Messaging & Gateways</h4>
+                            <p class="text-xs text-gray-500 mt-1" data-i18n="tech.messaging_desc">Async backbones and API edge for resilient systems.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">RabbitMQ</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">Kafka</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">KrakenD</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">Nginx</span>
+                    </div>
+                </div>
+
+                <!-- Data & ML -->
+                <div class="rounded-2xl border border-gray-200 p-6 hover:shadow-yellow-400/20 hover:shadow-md transition">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-600 flex items-center justify-center">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold tracking-wide uppercase text-gray-700" data-i18n="tech.data_ml">Data & ML</h4>
+                            <p class="text-xs text-gray-500 mt-1" data-i18n="tech.data_ml_desc">Pragmatic ML and analytics integrated into products.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">Python</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">PyTorch</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">Pandas</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">NumPy</span>
+                    </div>
+                </div>
+
+                <!-- Frontend & Mobile -->
+                <div class="rounded-2xl border border-gray-200 p-6 hover:shadow-yellow-400/20 hover:shadow-md transition">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-600 flex items-center justify-center">
+                            <i class="bi bi-window"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold tracking-wide uppercase text-gray-700" data-i18n="tech.frontend">Frontend & Mobile</h4>
+                            <p class="text-xs text-gray-500 mt-1" data-i18n="tech.frontend_desc">Product UIs for dashboards and apps.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">Vue 3</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">React</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">Flutter</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="rounded-2xl border border-gray-200 p-6 hover:shadow-yellow-400/20 hover:shadow-md transition">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-600 flex items-center justify-center">
+                            <i class="bi bi-database"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold tracking-wide uppercase text-gray-700" data-i18n="tech.databases">Databases</h4>
+                            <p class="text-xs text-gray-500 mt-1" data-i18n="tech.databases_desc">SQL and NoSQL engines I run in prod.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">PostgreSQL</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">MySQL</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">MongoDB</span>
+                    </div>
+                </div>
+
+                <!-- Tooling & DX -->
+                <div class="rounded-2xl border border-gray-200 p-6 hover:shadow-yellow-400/20 hover:shadow-md transition">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-600 flex items-center justify-center">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-semibold tracking-wide uppercase text-gray-700" data-i18n="tech.tooling">Tooling & DX</h4>
+                            <p class="text-xs text-gray-500 mt-1" data-i18n="tech.tooling_desc">Automation and developer experience essentials.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">Git</span>
+                        <span class="px-2 py-1 text-xs rounded-full bg-gray-100">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contact merged into footer -->
 
@@ -501,8 +592,16 @@
                 <ul class="space-y-3 text-sm">
                     <li><a href="mailto:joel@devallsas.com" class="text-yellow-400 hover:underline">joel@devallsas.com</a></li>
                     <li class="flex gap-4 text-xl">
-                        <a href="https://www.linkedin.com/in/joel-garciart" target="_blank" rel="noopener" data-i18n-attr="aria-label" data-i18n="aria.linkedin" class="hover:text-yellow-400 transition" aria-label="LinkedIn profile"><i class="bi bi-linkedin"></i></a>
-                        <a href="https://github.com/JoelGarcia99" target="_blank" rel="noopener" data-i18n-attr="aria-label" data-i18n="aria.github" class="hover:text-yellow-400 transition" aria-label="GitHub profile"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/joel-garciart" target="_blank" rel="noopener" data-i18n-attr="aria-label" data-i18n="aria.linkedin" class="hover:text-yellow-400 transition" aria-label="LinkedIn profile">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M20.447 20.452h-3.554V14.83c0-1.342-.027-3.067-1.868-3.067c-1.868 0-2.155 1.46-2.155 2.968v5.72H9.316V9h3.414v1.561h.049c.476-.9 1.637-1.848 3.37-1.848c3.602 0 4.267 2.372 4.267 5.455v6.284zM5.337 7.433a2.062 2.062 0 1 1 0-4.125a2.062 2.062 0 0 1 0 4.125zM6.941 20.452H3.732V9h3.209v11.452z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/JoelGarcia99" target="_blank" rel="noopener" data-i18n-attr="aria-label" data-i18n="aria.github" class="hover:text-yellow-400 transition" aria-label="GitHub profile">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.016-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729 1.205.084 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.776.418-1.305.762-1.605-2.665-.304-5.466-1.333-5.466-5.931 0-1.31.468-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.984-.399 3.003-.404 1.019.005 2.046.138 3.005.404 2.291-1.552 3.297-1.23 3.297-1.23.655 1.653.243 2.873.119 3.176.77.84 1.234 1.911 1.234 3.221 0 4.609-2.803 5.625-5.475 5.921.43.372.823 1.103.823 2.222 0 1.606-.015 2.896-.015 3.293 0 .321.216.694.825.576C20.565 22.092 24 17.592 24 12.297 24 5.373 18.627 0 12 .297z"/>
+                            </svg>
+                        </a>
                     </li>
                     <li>
                         <h5 class="text-gray-400 font-semibold text-xs tracking-wider uppercase mb-2" data-i18n="contact.publications">Publications</h5>

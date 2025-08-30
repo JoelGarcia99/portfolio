@@ -56,6 +56,18 @@
       'projects.resources_desc': 'Created for <span class="text-yellow-500">IEAN Jesus</span> — personnel, asset, and project allocation system designed for intuitive reporting and church resource transparency.',
 
       'tech.title': 'Technologies I Use',
+      'tech.core': 'Core Stack',
+      'tech.core_desc': 'Backend-first stack for building and scaling services.',
+      'tech.messaging': 'Messaging & Gateways',
+      'tech.messaging_desc': 'Async backbones and API edge for resilient systems.',
+      'tech.data_ml': 'Data & ML',
+      'tech.data_ml_desc': 'Pragmatic ML and analytics integrated into products.',
+      'tech.frontend': 'Frontend & Mobile',
+      'tech.frontend_desc': 'Product UIs for dashboards and apps.',
+      'tech.databases': 'Databases',
+      'tech.databases_desc': 'SQL and NoSQL engines I run in prod.',
+      'tech.tooling': 'Tooling & DX',
+      'tech.tooling_desc': 'Automation and developer experience essentials.',
 
       'contact.title': 'Get in Touch',
       'contact.email_me': 'Email Me',
@@ -121,6 +133,18 @@
       'projects.resources_desc': 'Creado para <span class="text-yellow-500">IEAN Jesús</span>: personal, activos y proyectos con reportes intuitivos y transparencia.',
 
       'tech.title': 'Tecnologías que uso',
+      'tech.core': 'Stack principal',
+      'tech.core_desc': 'Stack backend para construir y escalar servicios.',
+      'tech.messaging': 'Mensajería y Gateways',
+      'tech.messaging_desc': 'Colas y puertas de enlace para sistemas resilientes.',
+      'tech.data_ml': 'Datos e IA/ML',
+      'tech.data_ml_desc': 'ML y analítica pragmáticos integrados al producto.',
+      'tech.frontend': 'Frontend y Mobile',
+      'tech.frontend_desc': 'Interfaces para dashboards y apps.',
+      'tech.databases': 'Bases de datos',
+      'tech.databases_desc': 'Motores SQL y NoSQL en producción.',
+      'tech.tooling': 'Herramientas y DX',
+      'tech.tooling_desc': 'Automatización y experiencia del desarrollador.',
 
       'contact.title': 'Ponte en contacto',
       'contact.email_me': 'Envíame un correo',
@@ -138,6 +162,8 @@
     document.documentElement.setAttribute('lang', lang);
     // textContent targets
     document.querySelectorAll('[data-i18n]').forEach(el => {
+      // If element is using data-i18n-attr, do not overwrite its inner content
+      if (el.hasAttribute('data-i18n-attr')) return;
       const key = el.getAttribute('data-i18n');
       const val = dict[key];
       if (val != null) el.textContent = val;
